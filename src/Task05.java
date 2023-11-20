@@ -2,15 +2,16 @@ import java.util.Scanner;
 
 public class Task05 {
         public static boolean isPalindrome(int number) {
-            int originalnumber = number;
-            int reversedNumber = 0;
+            int originalNumber = number; // 111
+            int reversedNumber = 0; // 0
 
-            while (number != 0) {
-                int digit = number % 10;
-                reversedNumber = reversedNumber * 10 + digit;
-                number /= 10;
+            while (number != 0) { // 111 != 0
+                int digit = number % 10; // 11
+                reversedNumber = reversedNumber * 10 + digit; // 11
+                //             =       0        * 10 + 11
+                number = number / 10; // 1
             }
-            return originalnumber == reversedNumber;
+            return originalNumber == reversedNumber; // 32123 == 32123
         }
 
         public static void main(String[] args) {
